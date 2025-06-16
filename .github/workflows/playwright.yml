@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  E2E-Tests:
+  API-Tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:

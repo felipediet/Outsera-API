@@ -3,7 +3,7 @@ name: Rodar Testes Manualmente
 on:
     workflow_dispatch:
 jobs:
-  E2E-Tests:
+  API-Tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
