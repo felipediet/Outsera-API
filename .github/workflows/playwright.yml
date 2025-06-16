@@ -1,0 +1,25 @@
+name: Rodar Testes Automaticamente
+# Descrição: Este workflow é acionado automaticamente em push ou pull request para os branches main.
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  E2E-Tests:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Install Playwright Browsers
+      run: npx playwright install
+
+    - name: Run Playwright tests
+      run: npx playwright test
