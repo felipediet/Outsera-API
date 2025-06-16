@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('API Tests - Tarefa 2', () => {
-  const BASE_URL = 'https://jsonplaceholder.typicode.com';
+  const BASE_URL = process.env.BASE_URL;
 
   // Testes para GET
   test('GET /users - Validar lista de usuários', async ({ request }) => {
@@ -18,8 +18,8 @@ test.describe('API Tests - Tarefa 2', () => {
   // Testes para POST
   test('POST /posts - Criar um novo post', async ({ request }) => {
     const newPost = {
-      title: 'foo',
-      body: 'bar',
+      title: 'Outsera API Test',
+      body: 'Post novo da Outsera',
       userId: 1,
     };
     const response = await request.post(`${BASE_URL}/posts`, {
@@ -39,8 +39,8 @@ test.describe('API Tests - Tarefa 2', () => {
   test('PUT /posts/1 - Atualizar um post existente', async ({ request }) => {
     const updatedPost = {
       id: 1,
-      title: 'foo updated',
-      body: 'bar updated',
+      title: 'Outsera',
+      body: 'Post novo ATUALIZADO da Outsera',
       userId: 1,
     };
     const response = await request.put(`${BASE_URL}/posts/1`, {
@@ -57,12 +57,12 @@ test.describe('API Tests - Tarefa 2', () => {
   });
 
   // Testes para DELETE
-  test('DELETE /posts/1 - Deletar um post existente', async ({ request }) => {
-    const response = await request.delete(`${BASE_URL}/posts/1`);
+  test('DELETE /posts/66 - Deletar um post existente', async ({ request }) => {
+    const response = await request.delete(`${BASE_URL}/posts/66`);
     expect(response.status()).toBe(200);
     expect(response.headers()['content-type']).toContain('application/json');
     const body = await response.json();
-    expect(body).toEqual({}); // JSONPlaceholder retorna um objeto vazio para DELETE bem-sucedido
+    expect(body).toEqual({});
   });
 });
 

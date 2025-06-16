@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('API Tests - Tarefa 1', () => {
-  const BASE_URL = 'https://jsonplaceholder.typicode.com';
+  const BASE_URL = process.env.BASE_URL;
 
   test('GET /posts/1 - Validar status code, headers e corpo da resposta (positivo)', async ({ request }) => {
     const response = await request.get(`${BASE_URL}/posts/1`);
