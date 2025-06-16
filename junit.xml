@@ -1,0 +1,20 @@
+<testsuites id="" name="" tests="7" failures="0" skipped="0" errors="0" time="2.0565949999999993">
+<testsuite name="tarefa1.spec.ts" timestamp="2025-06-15T21:14:42.124Z" hostname="chromium" tests="3" failures="0" skipped="0" time="0.418" errors="0">
+<testcase name="API Tests - Tarefa 1 › GET /posts/1 - Validar status code, headers e corpo da resposta (positivo)" classname="tarefa1.spec.ts" time="0.144">
+</testcase>
+<testcase name="API Tests - Tarefa 1 › GET /posts/9999 - Validar status code para recurso inexistente (negativo)" classname="tarefa1.spec.ts" time="0.159">
+</testcase>
+<testcase name="API Tests - Tarefa 1 › GET /posts/abc - Validar status code para requisição inválida (negativo)" classname="tarefa1.spec.ts" time="0.115">
+</testcase>
+</testsuite>
+<testsuite name="tarefa2.spec.ts" timestamp="2025-06-15T21:14:42.124Z" hostname="chromium" tests="4" failures="0" skipped="0" time="0.991" errors="0">
+<testcase name="API Tests - Tarefa 2 › GET /users - Validar lista de usuários" classname="tarefa2.spec.ts" time="0.129">
+</testcase>
+<testcase name="API Tests - Tarefa 2 › POST /posts - Criar um novo post" classname="tarefa2.spec.ts" time="0.459">
+</testcase>
+<testcase name="API Tests - Tarefa 2 › PUT /posts/1 - Atualizar um post existente" classname="tarefa2.spec.ts" time="0.257">
+</testcase>
+<testcase name="API Tests - Tarefa 2 › DELETE /posts/1 - Deletar um post existente" classname="tarefa2.spec.ts" time="0.146">
+</testcase>
+</testsuite>
+</testsuites>
