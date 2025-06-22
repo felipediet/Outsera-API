@@ -168,14 +168,14 @@ O projeto gera relatórios em diferentes formatos:
 
 ### Endpoints Utilizados:
 
-| Método | Endpoint | Descrição |
-|--------|----------|-----------|
-| GET | `/posts/1` | Obtém um post específico |
-| GET | `/posts/9999` | Teste de recurso inexistente |
-| GET | `/users` | Lista todos os usuários |
-| POST | `/posts` | Cria um novo post |
-| PUT | `/posts/1` | Atualiza um post existente |
-| DELETE | `/posts/1` | Remove um post |
+| Método | Endpoint      | Descrição                    |
+| ------ | ------------- | ---------------------------- |
+| GET    | `/posts/1`    | Obtém um post específico     |
+| GET    | `/posts/9999` | Teste de recurso inexistente |
+| GET    | `/users`      | Lista todos os usuários      |
+| POST   | `/posts`      | Cria um novo post            |
+| PUT    | `/posts/1`    | Atualiza um post existente   |
+| DELETE | `/posts/1`    | Remove um post               |
 
 ### Estrutura de Dados:
 

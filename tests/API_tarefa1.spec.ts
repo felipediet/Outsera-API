@@ -18,12 +18,12 @@ test.describe('API Tests - Tarefa 1', () => {
     const response = await request.get(`${BASE_URL}/posts/9999`);
     expect(response.status()).toBe(404);
     const body = await response.json();
-    expect(body).toEqual({}); // JSONPlaceholder retorna um objeto vazio para 404
+    expect(body).toEqual({}); // Retorna um objeto vazio para 404
   });
 
   test('GET /posts/abc - Validar status code para requisição inválida (negativo)', async ({ request }) => {
     const response = await request.get(`${BASE_URL}/posts/abc`);
-    expect(response.status()).toBe(404); // JSONPlaceholder retorna 404 para IDs não numéricos
+    expect(response.status()).toBe(404); // Retorna 404 para IDs não numéricos
   });
 });
 
